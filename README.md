@@ -7,7 +7,7 @@ In this article, we will delve into the significance of global exception handlin
 
 <b>Author:</b> <a href="https://github.com/jeffrey-spaan-real" target="_blank">Jeffrey Spaan</a><br>
 <b>Created:</b> 2024-03-25<br>
-<b>Last updated:</b> 2024-03-27
+<b>Last updated:</b> 2024-04-04
 
 [![](https://img.shields.io/badge/Spring%20Boot-8A2BE2)]() [![](https://img.shields.io/badge/release-Mar%2021,%202024-blue)]() [![](https://img.shields.io/badge/version-3.2.4-blue)]()
 
