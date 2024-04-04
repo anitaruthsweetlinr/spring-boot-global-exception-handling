@@ -4,7 +4,6 @@ import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.MessageSource;
-import org.springframework.context.NoSuchMessageException;
 import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +16,7 @@ import java.util.Locale;
  * The message files are located in resources/i18n
  *
  * @author Jeffrey Spaan
- * @since 2024-03-24
+ * @since 2024-04-04
  */
 
 @Service
@@ -32,15 +31,11 @@ public class I18nService {
     @Value("${spring.messages.logging-language}")
     private String loggingLanguage;
 
-    public String getLogMessage(String code) throws NoSuchMessageException {
+    public String getLogMessage(String code) {
         return messageSource.getMessage(code, null, Locale.of(loggingLanguage));
     }
 
-    public String getMessage(String code) throws NoSuchMessageException {
-        return messageSource.getMessage(code, null, request.getLocale());
-    }
-
-    public String getMessage(String code, @Nullable String[] args) throws NoSuchMessageException {
+    public String getMessage(String code, @Nullable String... args) {
         return messageSource.getMessage(code, args, request.getLocale());
     }
 }

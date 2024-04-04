@@ -38,7 +38,7 @@ public class UserService {
         if (user.isEmpty()) {
             log.error(i18nService.getLogMessage("user.not.found.log"), username);
 //            throw new ResourceNotFoundException(String.format("User with username %s not found!", username));
-            throw new ResourceNotFoundExceptionWithI18n("user.not.found", new String[]{username});
+            throw new ResourceNotFoundExceptionWithI18n("user.not.found", username);
         }
         return user.get();
     }
